@@ -157,7 +157,7 @@ after running `mvn javafx:run` on a machine with a display.
 
 ## 12. GitHub Repository Link
 
-[GitHub URL — to be added after deployment]
+https://github.com/myciscomap-prog/hotel-reservation-management-system
 
 ## 13. Challenges Encountered
 
