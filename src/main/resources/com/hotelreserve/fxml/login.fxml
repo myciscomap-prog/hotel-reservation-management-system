@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.hotelreserve.controller.LoginController"
+           styleClass="login-root">
+    <VBox styleClass="login-card" spacing="14" maxWidth="340" maxHeight="-Infinity" alignment="CENTER">
+        <padding>
+            <Insets top="36" right="36" bottom="36" left="36"/>
+        </padding>
+        <Label text="Hotel Reservation" styleClass="login-title"/>
+        <Label text="Front Desk Sign-In" styleClass="login-subtitle"/>
+        <VBox spacing="4">
+            <Label text="Username"/>
+            <TextField fx:id="usernameField" promptText="frontdesk"/>
+        </VBox>
+        <VBox spacing="4">
+            <Label text="PIN"/>
+            <PasswordField fx:id="pinField" promptText="****" onAction="#onLogin"/>
+        </VBox>
+        <Button text="Sign In" onAction="#onLogin" styleClass="primary-button" maxWidth="Infinity"/>
+        <Label fx:id="errorLabel" styleClass="form-error" wrapText="true"/>
+    </VBox>
+</StackPane>

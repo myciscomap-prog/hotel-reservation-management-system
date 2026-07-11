@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.hotelreserve.controller.RoomFormController"
+      spacing="10" styleClass="form-root">
+    <padding>
+        <Insets top="4" right="4" bottom="4" left="4"/>
+    </padding>
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120"/>
+            <ColumnConstraints minWidth="220"/>
+        </columnConstraints>
+
+        <Label text="Room Number" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="roomNumberField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="e.g. 104"/>
+
+        <Label text="Floor" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="floorField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="1"/>
+
+        <Label text="Room Type" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="roomTypeCombo" GridPane.rowIndex="2" GridPane.columnIndex="1" maxWidth="Infinity"/>
+
+        <Label text="Max Occupancy" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="maxOccupancyField" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="2"/>
+
+        <Label text="Base Rate (GHS/night)" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="baseRateField" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="350.00"/>
+
+        <Label text="Status" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="statusCombo" GridPane.rowIndex="5" GridPane.columnIndex="1" maxWidth="Infinity"/>
+    </GridPane>
+    <Label fx:id="errorLabel" styleClass="form-error" wrapText="true"/>
+</VBox>

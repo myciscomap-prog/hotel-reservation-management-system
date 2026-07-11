@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.hotelreserve.controller.BillingController"
+      spacing="14" styleClass="screen">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Billing" styleClass="screen-title"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="card">
+        <Label text="Reservation:"/>
+        <ComboBox fx:id="reservationCombo" prefWidth="320"/>
+        <Button text="Generate Invoice" onAction="#onGenerateInvoice" styleClass="secondary-button"/>
+    </HBox>
+
+    <VBox styleClass="card" spacing="8" VBox.vgrow="ALWAYS">
+        <Label text="Invoice" styleClass="card-section-title"/>
+        <TextArea fx:id="invoiceArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+    <VBox styleClass="card" spacing="10">
+        <Label text="Record Payment" styleClass="card-section-title"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Method:"/>
+            <ComboBox fx:id="methodCombo" prefWidth="160"/>
+            <Label text="Amount (GHS):"/>
+            <TextField fx:id="amountField" prefWidth="120" promptText="0.00"/>
+            <Button text="Record Payment" onAction="#onRecordPayment" styleClass="primary-button"/>
+        </HBox>
+        <Label fx:id="paymentErrorLabel" styleClass="form-error" wrapText="true"/>
+    </VBox>
+</VBox>

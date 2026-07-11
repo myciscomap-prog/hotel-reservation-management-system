@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.hotelreserve.controller.DashboardController"
+      spacing="16" styleClass="screen">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Dashboard" styleClass="screen-title"/>
+
+    <FlowPane fx:id="summaryCardsContainer" hgap="16" vgap="16"/>
+
+    <HBox spacing="16" VBox.vgrow="ALWAYS">
+        <VBox styleClass="card" spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Today's Check-Ins" styleClass="card-section-title"/>
+            <ListView fx:id="checkInsList" fixedCellSize="30" styleClass="empty-state-list"/>
+        </VBox>
+        <VBox styleClass="card" spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Today's Check-Outs" styleClass="card-section-title"/>
+            <ListView fx:id="checkOutsList" fixedCellSize="30" styleClass="empty-state-list"/>
+        </VBox>
+    </HBox>
+</VBox>

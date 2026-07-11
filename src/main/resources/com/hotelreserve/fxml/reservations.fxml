@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.hotelreserve.controller.ReservationsController"
+      spacing="14" styleClass="screen">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Reservations" styleClass="screen-title"/>
+
+    <VBox styleClass="card" spacing="10">
+        <Label text="New Booking" styleClass="card-section-title"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Guest:"/>
+            <ComboBox fx:id="guestCombo" prefWidth="220"/>
+            <Label text="Check-In:"/>
+            <DatePicker fx:id="checkInPicker" prefWidth="140"/>
+            <Label text="Check-Out:"/>
+            <DatePicker fx:id="checkOutPicker" prefWidth="140"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Room:"/>
+            <ComboBox fx:id="roomCombo" prefWidth="260"/>
+            <Button text="Refresh Availability" onAction="#onRefreshRooms"/>
+            <Label text="Guests:"/>
+            <TextField fx:id="numberOfGuestsField" prefWidth="60" promptText="2"/>
+            <Button text="Book Reservation" onAction="#onBookReservation" styleClass="primary-button"/>
+        </HBox>
+        <Label fx:id="quoteLabel" styleClass="placeholder-text" wrapText="true"/>
+        <Label fx:id="bookingErrorLabel" styleClass="form-error" wrapText="true"/>
+    </VBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="guestColumn" text="Guest" prefWidth="160"/>
+            <TableColumn fx:id="roomColumn" text="Room" prefWidth="80"/>
+            <TableColumn fx:id="datesColumn" text="Dates" prefWidth="200"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="110"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="240"/>
+        </columns>
+    </TableView>
+</VBox>
