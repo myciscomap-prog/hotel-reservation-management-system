@@ -2,13 +2,19 @@
 
 ## 1. Title Page
 
+**UNIVERSITY OF CAPE COAST**
+**COLLEGE OF DISTANCE EDUCATION (CoDE)**
+**DEPARTMENT OF SCIENCE AND MATHEMATICS**
+**INF811D: OBJECT ORIENTED PROGRAMMING**
+**MSc Information Technology Programme**
+
 **Hotel Reservation Management System**
 A JavaFX Desktop Application for Front-Desk Room, Guest, Reservation, and Billing Management
 
-Course: INF811D — Object-Oriented Programming
-Programme: MSc Information Technology
-Institution: University of Cape Coast, College of Distance Education
-Author: Senior Mike
+Technical Report — Semester 1 Practical Project, 2025/2026 Academic Year
+Submitted by: Michael Quarshie
+Index Number: MS/ITE/25/0012
+GitHub Repository: github.com/myciscomap-prog/hotel-reservation-management-system
 Date: July 2026
 
 ---

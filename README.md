@@ -116,4 +116,4 @@ Repository: https://github.com/myciscomap-prog/hotel-reservation-management-syst
 
 ## Author
 
-Senior Mike — MSc Information Technology, University of Cape Coast
+Michael Quarshie (MS/ITE/25/0012) — MSc Information Technology, University of Cape Coast
