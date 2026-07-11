@@ -143,17 +143,25 @@ handlers and property-change listeners throughout the controller package).
 
 ## 11. Screenshots and Outputs
 
-[Screenshot: Login screen — to be added after manual run]
-[Screenshot: Dashboard — to be added after manual run]
-[Screenshot: Rooms screen with add/edit dialog — to be added after manual run]
-[Screenshot: Reservations screen showing live price quote — to be added after manual run]
-[Screenshot: Billing screen showing a generated invoice — to be added after manual run]
-[Screenshot: Guests screen — to be added after manual run]
+**Login** — front-desk sign-in screen (`screenshots/login.png`)
 
-This build was produced in a headless development environment without a display attached,
-so the application could be compiled and fully unit-tested but not launched interactively to
-capture screenshots. Screenshots will be added to the `screenshots/` folder and this section
-after running `mvn javafx:run` on a machine with a display.
+**Dashboard** — room occupancy summary (8 available, 0 reserved/occupied/maintenance) and
+today's check-in/check-out lists (`screenshots/dashboard.png`)
+
+**Rooms** — the seeded room inventory across all three types (Standard, Deluxe, Suite) with
+status/type filters and per-room Edit/Toggle Maintenance actions (`screenshots/rooms.png`)
+
+**Guests** — guest table with name search and Add Guest action (`screenshots/guests.png`)
+
+**Reservations** — the booking form (guest, room, check-in/check-out dates, guest count,
+live price quote) above the reservations table with check-in/check-out/cancel actions
+(`screenshots/reservations.png`)
+
+**Billing** — reservation selector, generated itemized invoice panel, and the payment
+recording form (method + amount) (`screenshots/billing.png`)
+
+These were captured by running `mvn javafx:run` locally on a Windows machine with a display,
+signing in with the front-desk credentials, and walking through each screen.
 
 ## 12. GitHub Repository Link
 

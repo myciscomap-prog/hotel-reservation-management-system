@@ -89,20 +89,17 @@ or double-click `test.bat`.
 
 ## Screenshots
 
-Screenshots will be added here after a manual run of the application (this build was done
-in a headless environment without a display).
-
 | Login | Dashboard |
 |---|---|
-| _to be added_ | _to be added_ |
+| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
 
 | Rooms | Reservations |
 |---|---|
-| _to be added_ | _to be added_ |
+| ![Rooms](screenshots/rooms.png) | ![Reservations](screenshots/reservations.png) |
 
 | Billing | Guests |
 |---|---|
-| _to be added_ | _to be added_ |
+| ![Billing](screenshots/billing.png) | ![Guests](screenshots/guests.png) |
 
 ## GitHub Upload Commands
 
